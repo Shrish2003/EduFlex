@@ -1,0 +1,51 @@
+backend/
+├── config/
+│   ├── db.js               # MongoDB connection configuration
+│   ├── auth.js             # JWT and authentication strategies
+│   └── config.env          # Environment variables (e.g., DB_URI, JWT_SECRET)
+│
+├── controllers/            # Request handling logic
+│   ├── authController.js   # Authentication logic (login, register)
+│   ├── userController.js   # User-specific actions (profile, progress)
+│   ├── courseController.js # Course-related logic (CRUD, enrollment)
+│   ├── quizController.js    # Quiz management logic (create, take, score)
+│   ├── assignmentController.js # Assignment submission and grading logic
+│   ├── certificateController.js # Logic for generating certificates
+│   └── adminController.js  # Admin-specific actions (manage users/courses, analytics)
+│
+├── middleware/             # Custom middleware (authentication, validation)
+│   ├── authMiddleware.js   # Protect routes (JWT verification)
+│   └── errorHandler.js     # Centralized error handling
+│
+├── models/                 # Mongoose models (MongoDB schema definitions)
+│   ├── User.js             # User schema (Admin, Instructor, Student roles)
+│   ├── Course.js           # Course schema (modules, lessons, etc.)
+│   ├── Quiz.js             # Quiz schema (questions, answers)
+│   ├── Assignment.js       # Assignment schema (submission, grading)
+│   ├── Certificate.js      # Certificate schema (course completion)
+│   └── Badge.js           # Badge schema (user achievements)
+│
+├── routes/                 # API routes
+│   ├── authRoutes.js       # Authentication routes (login, register)
+│   ├── userRoutes.js       # Routes for user profile, progress, etc.
+│   ├── courseRoutes.js     # Routes for course management and enrollment
+│   ├── quizRoutes.js       # Routes for quiz management
+│   ├── assignmentRoutes.js  # Routes for assignment management
+│   ├── certificateRoutes.js # Routes for generating certificates
+│   └── adminRoutes.js      # Admin-related routes (manage users, courses, analytics)
+│
+├── utils/                  # Utility functions
+│   ├── generateToken.js    # JWT token generation
+│   ├── sendEmail.js        # Function to send emails (e.g., notifications, certificates)
+│   └── asyncHandler.js     # Async handler for route controllers
+│
+├── validators/             # Request validation
+│   ├── authValidator.js    # Validation for login, registration
+│   ├── courseValidator.js  # Validation for course creation, update
+│   ├── quizValidator.js    # Validation for quiz creation, submission
+│   ├── assignmentValidator.js # Validation for assignment submission
+│   └── userValidator.js    # Validation for user profile updates
+│
+├── app.js                  # Express app setup (middleware, routes)
+├── server.js               # Server entry point
+└── package.json            # Project dependencies and scripts

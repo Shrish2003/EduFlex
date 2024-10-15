@@ -1,0 +1,64 @@
+frontend/
+├── public/
+│   ├── index.html          # Main HTML file
+│   ├── manifest.json       # PWA settings (if needed)
+│   └── favicon.ico         # Favicon
+│
+├── src/
+│   ├── assets/             # Static assets (images, icons, etc.)
+│   ├── components/         # Reusable React components
+│   │   ├── Navbar.js       # Main navigation bar
+│   │   ├── Sidebar.js      # Sidebar navigation (if applicable)
+│   │   ├── Footer.js       # Footer component
+│   │   ├── CourseCard.js   # Display course information
+│   │   ├── ProgressBar.js   # Visual representation of course progress
+│   │   ├── QuizComponent.js # Quiz interface component
+│   │   ├── BadgeComponent.js # Display user badges
+│   │   └── Notification.js  # Notification for updates, alerts, etc.
+│   │
+│   ├── pages/              # Main pages for routing
+│   │   ├── HomePage.js     # Landing page
+│   │   ├── LoginPage.js    # User login page
+│   │   ├── RegisterPage.js # User registration page
+│   │   ├── Dashboard.js     # User dashboard after login
+│   │   ├── Courses/        # Course-related pages
+│   │   │   ├── CourseList.js      # List of all available courses
+│   │   │   ├── CourseDetail.js    # Individual course details
+│   │   │   ├── CreateCourse.js    # Instructor's course creation form
+│   │   │   ├── EditCourse.js      # Edit course details
+│   │   │   └── EnrollCourse.js    # Enroll in a selected course
+│   │   ├── Profile/        # User profile section
+│   │   │   ├── ProfilePage.js     # Profile viewing and editing
+│   │   │   ├── ProgressPage.js    # View user’s course progress
+│   │   │   ├── CertificatesPage.js # View earned certificates
+│   │   │   └── BadgesPage.js      # View earned badges
+│   │   ├── Admin/          # Admin panel pages
+│   │   │   ├── AdminDashboard.js  # Admin dashboard for managing LMS
+│   │   │   ├── ManageUsers.js     # Admin user management page
+│   │   │   ├── ManageCourses.js   # Admin course management page
+│   │   │   └── AnalyticsPage.js   # View analytics and reports
+│   │   └── ErrorPage.js    # 404 or error page component
+│   │
+│   ├── services/           # API calls and services
+│   │   ├── authService.js   # User authentication API calls
+│   │   ├── courseService.js # API calls to interact with course data
+│   │   ├── profileService.js # API calls for user profiles
+│   │   ├── quizService.js    # API calls for quiz management
+│   │   ├── assignmentService.js # API calls for assignments
+│   │   └── analyticsService.js   # API calls for analytics data
+│   │
+│   ├── utils/              # Utility functions (helpers, constants)
+│   │   ├── auth.js         # Helper functions for authentication
+│   │   ├── validations.js   # Form validations
+│   │   └── constants.js     # Global constants (user roles, course types)
+│   │
+│   ├── hooks/              # Custom hooks for state management
+│   │   └── useFetch.js     # Fetch data from APIs
+│   │
+│   ├── App.js              # Main React component (routes and layout)
+│   ├── index.js            # Main entry point for React app
+│   └── styles/             # CSS/SCSS for styling components
+│       ├── global.css      # Global styles
+│       └── componentStyles.css # Component-specific styles
+│
+└── package.json            # Project dependencies and scripts
